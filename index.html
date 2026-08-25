@@ -47,24 +47,62 @@
 </section>
 
     
-    <section class="card">
-      <h2>Catálogo de Puntuaciones</h2>
-      <div class="table-container">
-        <table id="games-table">
-          <thead>
-            <tr>
-              <th>Título</th>
-              <th>Año</th>
-              <th>Puntaje</th>
-              <th>Techo</th>
-              <th>Mérito Histórico (%)</th>
-            </tr>
-          </thead>
-          <tbody id="games-list">
-            </tbody>
-        </table>
-      </div>
-    </section>
+<!-- Sección de Catálogo con Filtros -->
+<section class="card">
+  <h2>Catálogo de Puntuaciones</h2>
+
+  <!-- Barra de Filtros -->
+  <div class="filters-bar">
+    <div class="filter-item">
+      <label for="filter-search">Buscar:</label>
+      <input type="text" id="filter-search" placeholder="Nombre del juego...">
+    </div>
+
+    <div class="filter-item">
+      <label for="filter-era">Época / Década:</label>
+      <select id="filter-era">
+        <option value="all">Todas las épocas</option>
+        <option value="retro">Clásicos (Antes de 1990)</option>
+        <option value="90s">Años 90 (1990 - 1999)</option>
+        <option value="00s">Años 2000 (2000 - 2009)</option>
+        <option value="10s">Años 2010 (2010 - 2019)</option>
+        <option value="20s">Años 2020+ (2020 en adelante)</option>
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="filter-platform">Plataforma:</label>
+      <select id="filter-platform">
+        <option value="all">Todas las plataformas</option>
+        <option value="PC">PC</option>
+        <option value="SNES">SNES</option>
+        <option value="Nintendo 64">Nintendo 64</option>
+        <option value="PlayStation 2">PlayStation 2</option>
+        <option value="Xbox 360">Xbox 360</option>
+        <option value="Multiplataforma">Multiplataforma</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Tabla -->
+  <div class="table-container">
+    <table id="games-table">
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Año</th>
+          <th>Plataforma</th>
+          <th>Puntaje</th>
+          <th>Techo</th>
+          <th>Mérito (%)</th>
+        </tr>
+      </thead>
+      <tbody id="games-list">
+        <!-- Renderizado dinámico -->
+      </tbody>
+    </table>
+  </div>
+</section>
   </main>
 
   <script src="games.js"></script>
