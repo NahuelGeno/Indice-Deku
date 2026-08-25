@@ -184,3 +184,48 @@ th {
   font-size: 1.05rem;
   font-weight: bold;
 }
+
+/* Barra de Filtros */
+.filters-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(15, 23, 42, 0.4);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-item label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+select {
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: #0f172a;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.badge-platform {
+  background-color: #334155;
+  color: #f1f5f9;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
