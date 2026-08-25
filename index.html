@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Puntuación Temporal de Videojuegos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎮 Metodología de Puntuación Temporal</h1>
+    <p>Evaluando videojuegos según el techo técnico y narrativo de su propia era (Base año 2000 = 100 pts).</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Calcular Puntuación de un Juego</h2>
+      <form id="game-form">
+        <div class="form-group">
+          <label for="title">Título del juego:</label>
+          <input type="text" id="title" placeholder="Ej. Unreal Tournament" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="year">Año de lanzamiento:</label>
+          <input type="number" id="year" placeholder="Ej. 1999" min="1970" max="2035" required>
+        </div>
+
+        <div class="form-group">
+          <label for="score">Puntaje obtenido:</label>
+          <input type="number" id="score" step="0.1" placeholder="Ej. 95" required>
+          <small id="score-hint" class="hint">El techo para este año se calculará automáticamente.</small>
+        </div>
+
+        <button type="submit">Agregar al Ránking</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Catálogo de Puntuaciones</h2>
+      <div class="table-container">
+        <table id="games-table">
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Año</th>
+              <th>Puntaje</th>
+              <th>Techo de la Era</th>
+              <th>Mérito Histórico (%)</th>
+            </tr>
+          </thead>
+          <tbody id="games-list">
+            </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
