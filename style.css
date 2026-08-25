@@ -131,3 +131,56 @@ th {
   border-radius: 6px;
   font-weight: bold;
 }
+
+/* Estilos para el Manifiesto / Explicación */
+.manifesto-intro {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rule-box {
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.rule-box h3 {
+  color: var(--primary);
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.rule-box p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.rule-icon {
+  font-size: 1.5rem;
+}
+
+.formula-banner {
+  background-color: #0f172a;
+  border-left: 4px solid var(--primary);
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.formula-banner code {
+  color: var(--primary);
+  font-family: monospace;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
